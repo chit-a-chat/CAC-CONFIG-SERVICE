@@ -19,5 +19,5 @@ management:
 encrypt:
   key-store:
     location: classpath:cac.jks
-    password: chitachat
+    password: ${JSK_PASS}
     alias: cac

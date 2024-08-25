@@ -1,10 +1,6 @@
 # Step 1: Use a Gradle image to build the application
 FROM gradle:8.2-jdk17 AS builder
 
-# Set environment variables
-ENV USE_PROFILE=local
-ENV SPRING_CONFIG_ACTIVATE_ON_PROFILE=local
-
 # Set the working directory
 WORKDIR /app
 
@@ -19,8 +15,8 @@ RUN gradle dependencies --no-daemon
 # Copy source code
 COPY src/ src/
 
-# Build the application
-RUN gradle clean build --no-daemon
+# Build the application, excluding tests
+RUN gradle clean build -x test --no-daemon
 
 # Step 2: Use a smaller base image for running the application
 FROM openjdk:17-jdk-slim
@@ -34,5 +30,8 @@ COPY --from=builder /app/build/libs/*.jar app.jar
 # Expose the port the application will run on
 EXPOSE 8888
 
-# Command to run the application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Set default profile
+ENV PROFILES=tst
+
+# Command to run the application with JVM options
+ENTRYPOINT ["sh", "-c", "java -Dspring.profiles.active=${PROFILES} -jar app.jar"]

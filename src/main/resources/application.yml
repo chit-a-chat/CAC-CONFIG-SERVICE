@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git: #default
+          uri: https://github.com/chit-a-chat/CAC-CONFIG
+        bootstrap: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh, refresh, metrics
+encrypt:
+  key-store:
+    location: classpath:cac.jks
+    password: ${JSK_PASS}
+    alias: cac

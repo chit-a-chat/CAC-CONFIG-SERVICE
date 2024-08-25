@@ -12,8 +12,8 @@ spring:
       server:
         git: #default
           uri: https://github.com/chit-a-chat/CAC-CONFIG
-          username: ${GITHUB_USERNAME}
-          password: ${GITHUB_PASS}
+          username: "{cipher}AQCWgm+ActMgvflI8sarlSfvaOGQA2CUhlB3P9+EOfqlHpOabY9b8tO3/bsdBmVEPV1go0iVsjtUVyQLoaWJdXE+RflJGB/pOT7/7kGVs9LCPEcq+av/kEIENCRwwvopL4q0rckKqWD1gL/vKrf75Uk/KxUBMkiJRRLOZARNGbro1ddfOa2JRnoxu2SdcXHmwI0IjOpTz5+6Kcml1H3cS6ldH7eRuYobpawgfXW3XVm+WqsGrMy6qFIjyXvK+s0SB131z/lIa9yJynAylACeLSZ7zloix4EyurARLStM3gVf3FytU63NUkU0lGRIVp67fnzKtTQTItr/SxyzITu9D9ISrMTaKksjCuTnE3WfLnU39WGptX1NJ3bwENEpPOuIgMs="
+          password: "{cipher}AQAa1r8otjJ8ND5oRLh9Fx51ptELKHLpSAHHu/Sf4fpAWDaR6m6Res3vBLrzsb/PkcMIGrG1xOSkTcFrHseVeq7OLEC6t00lyhTJVn0sazy9lLJQES/QrNFEdQ24oTQrVrg51QzLZ3nFht+svp39vg3zPDjEU+FB6zz1FUj1aecBdB6rKRaenV4C73N/D72bXg2BKOXhyQDT7mb1nGMdOL+Ut3kQrHoSAh8fSMrCNKxGMYCbeqfv3iqbcvlbXGaDiSUDMR/geo9kztGqN4NuDFHptFBoL8tMkq3N1S90UJkCXWdMm4akRuTijnO//H6t0f8h/5d+EWQukA1gjit4Y/YWLOxJ86Al4gI8iVCSdQLhJkDKfB/52uM3RO2R3i/mJLYUhn5virDRIMNbP/MhJqSip4s4eANoAMfS70UU1XY4BQ=="
         bootstrap: true
 
 management:

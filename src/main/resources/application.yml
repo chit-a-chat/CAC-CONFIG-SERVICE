@@ -19,5 +19,5 @@ management:
 encrypt:
   key-store:
     location: classpath:cac.jks
-    password: ${JSK_PASS}
+    password: ${JKS_PASSWORD}
     alias: cac

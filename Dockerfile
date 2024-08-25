@@ -2,9 +2,9 @@
 FROM gradle:8.2-jdk17 AS builder
 
 # Set environment variables
-ENV USE_PROFILE=local
-ENV SPRING_CONFIG_ACTIVATE_ON_PROFILE=local
-
+ENV USE_PROFILE local
+ENV SPRING_CONFIG_ACTIVATE_ON_PROFILE local
+ENV JKS_PASSWORD pass
 # Set the working directory
 WORKDIR /app
 

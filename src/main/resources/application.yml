@@ -12,6 +12,8 @@ spring:
       server:
         git: #default
           uri: https://github.com/chit-a-chat/CAC-CONFIG
+          username: ${GITHUB_USERNAME}
+          password: ${GITHUB_PASS}
         bootstrap: true
 
 management:
